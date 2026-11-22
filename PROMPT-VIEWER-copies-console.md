@@ -74,6 +74,14 @@ multiple times." One X or Escape from a media view opened out of a chat must lan
 place in it (not step back through every view opened on the way). Viewer web only; a browser test that opens a
 media view from a chat, closes it once, and finds the chat.
 
+## Part 3b (added later by the owner; do it even if part 3 is already merged)
+"Clicking in the grey space should probably be interpreted the same as exiting as well. Add it as a toggle, on by
+default." In the media view, a click on the empty area around the picture or video (not on the media itself, not on
+the arrows, buttons or the video's controls) closes it exactly as the X does (part 3: back to the chat, same place).
+A setting in the viewer's Settings, "Click outside the picture to close", on by default, kept with the viewer's
+other preferences. A browser test: a click on the backdrop closes it with the setting on, does nothing with it off,
+and a click on the picture or an arrow never closes it.
+
 ## Stop and ask the owner when
 - the catalogue holds no link from the post to the saved copy (then say what would have to be recorded, and stop);
 - anything would download, release or write, or would need the owner's real folders.

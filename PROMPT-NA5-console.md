@@ -1,5 +1,9 @@
 # Finish NA5 (the move to the NAS) on the owner's Console credits
 
+**Run steps 1 to 6 in ONE go, without stopping between them** (the owner is not watching, and a stop ends this run;
+it runs through the Agent SDK script `ix-tools/agent-run/run_agent.py`, not an interactive Claude Code session).
+"Stop and ask the owner" below means: stop there and say so in your final report; never wait for an answer.
+
 You are one Claude Code session in a terminal, billed to the owner's Anthropic Console credits (API prices). The owner
 asked for exactly this one task: finish NA5, get it reviewed, and merge it. Nothing else. Keep it lean: every turn
 costs the owner real money.

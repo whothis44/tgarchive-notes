@@ -35,6 +35,15 @@ The owner pastes: "Read `START-INTEGRATOR.md` and do what it says." You are the 
 6. Update: the board's own row, the schema line, the queue (mark merged), three lines in your progress file, one notes
    commit. Tell the tracks whose branches the head moved under, by direct message.
 
+## The notes' backup (the owner, 11-22)
+The notes (this folder's top-level `.md`/`.sql`, branch `notes`) are backed up to the private repo
+`whothis44/tgarchive-notes` (remote `backup`) as snapshot commits only; the local history never goes up. After the notes
+commit of each batch: `bash ix-tools/notes-backup/backup.sh`. It checks every file against both catalogues' real names,
+usernames and ids (read-only), personal emails and secrets, and refuses on any hit, printing counts and file names only.
+A refusal for names: `REDACT=1 python -I ix-tools/notes-backup/scan_names.py . repo-archiver/archiver wt-v12.32`
+replaces them with "[name removed]" (never shown), then commit and run the backup again. Real chat names, titles,
+contents or ids never go into the notes at all (CLAUDE.md).
+
 ## Practical
 - Go: `source ix-tools/env-archiver.sh` (it names the app folder's ffmpeg); `GOMEMLIMIT=1GiB GOMAXPROCS=2 GOFLAGS=-p=2`.
   Keep about 2 GB free. The whole collector takes 30 to 35 minutes (`-timeout 45m`).

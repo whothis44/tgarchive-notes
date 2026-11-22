@@ -1,13 +1,42 @@
 # The NAS downloader track: progress (newest state only; older text in SESSION-NAS-LOG.md)
 
-## STATE, session N-1 (Opus), 11-22 09:58: the autonomous NAS (owner: "Yes, as recommended", item 50) being built in small pieces
-- Integrator now: **I-7** (local_78ac6953-2e70-4c12-a371-4f255f71e85c): listings and reports go there. N4 MERGED inside F15 (head 2b38b2a3); new pieces build on it. K24 (Account.BroughtIn) not on the head yet: the owed refusal waits.
-- Merged: N1 tunnel (09d63f94), N2 link and N3 NAS program (wip/nas-program 868d1b6f). LISTED: N4, the PC's side
-  (`wip/nas-pcside` 24630f73, after pages' N4P; Core's read, one review and a second look, all fixed). Nothing runs; no agent.
-- 09:58: **NA2 LISTED** (11:19, `wip/nas-ctunnel` 6a04d72c; review fixed; race clean); 10:46; lent to Core; `BRIEF-NA2-collector-tunnel.md`, `wip/nas-ctunnel`, `wt-nas-ctunnel`) with an Opus coder, and **NA1 DONE** (`MEASURE-NA1-memory.md`: collector about 105 MiB steady, 204 peak; viewer 803 MiB peak; limits 768 MiB / 1 GiB / 512 MiB; harness `wip/nas-measure` gated, not for merge; the 36 GiB Docker volume removed) (invented archive at the unified size; collector and viewer in Docker with the NAS's limits) with an Opus coder (`BRIEF-NA1-measure.md`, `wip/nas-measure`, `wt-nas-measure`); **NA3 LISTED 12:20** (`wip/nas-app` f46449cc; needs from others: a collector `check` of the status file's age, `-staging` optional, the pages' listen flag (NA4), the viewer on a read-only WAL catalogue) (12:04, `BRIEF-NA3-deploy-nas-app.md`, `wip/nas-app`); then: the collector's dialler through the tunnel on Linux and the gate's NAS form; `deploy/nas-app`; pages and viewer behind pinned keys; the window's gate to the NAS; the move.
-- **11-22: the owner's new direction (the NAS autonomous, the PC the dashboard): `DESIGN-NAS-autonomous.md` written, board item 50 (three yeses); the next integrator dispatches the build after the yes. Checked: collector, watchdog, backup and the main program build for Linux (CGO off).**
-- Owed by me, after K24 and F15/N4 are on the head: the NAS doors (collector `nas_doors.go`) refuse a brought-in account (`Account.BroughtIn` / `!Live()`) in pages' fixed words ("This is the old archive: it is never signed in."), so the old account never gets a NAS place or sign-in; a small follow-up branch with a test (Core asked 11-22).
-- Owed by others: Core's point 6 (the NAS's alerts) after K22; pages' small round (Held, give-back route) on N4.
-- Next for this track: N5 (fingerprints and thumbnails on the NAS) after the thumbnails' measuring run (board item 31). The
-  owner's first real steps after N4 is installed: deploy (`deploy/nasdl/README.md`), `vpntest` (M2), the test account into a
-  test folder. Design: `DESIGN-NAS-downloader.md`; the PC's side: `NOTE-N4-collector-side.md`.
+## STATE FOR A TAKE-OVER, session N-1 (Opus), 11-22 16:37: stopped by usage (99%); start from here
+- **The direction (owner, 11-22, item 50 "Yes, as recommended"):** the whole app runs headless on the NAS, the PC's app
+  is its dashboard; the login MOVES with the catalogue; the PC downloads nothing for a NAS-run archive.
+  Design: `DESIGN-NAS-autonomous.md`. Measured: `MEASURE-NA1-memory.md` (collector 768 MiB, viewer 1 GiB, ffmpeg 512 MiB).
+- **Merged (main 84e98ca):** N1-N4 (the earlier NAS downloader), NA2 (`collector.telegram_way`: system/tunnel/none),
+  NA3 (`deploy/nas-app`), NA3b (old-archive refusal on NAS doors, `check` health command, `-no-staging`), NA4 (the
+  pinned-key gate `tgarchive-nasgate` front/back). The NAS runs WITH a staging folder (fingerprints read staged copies).
+- **NA5, the move (`tgarchive-nasmove out|in|back`), NOT LISTED:** `wip/nas-move` (copy `wt-nas-move`), first build
+  50bd1206; the fix round's WORK-IN-PROGRESS commit 7b0d01c0 (main merged in at 6260d5b2) is pushed: it DOES NOT BUILD and nothing
+  in it was run. Written, untested: review points 3, 5, 6, 9, 10, most of 11, the out halves of 2 and 8. NOT done: 1, the back
+  half of 2, 4, 7, the placing half of 8, the -viewer and -abort flags, the README fixes, the probes as tests, all runs.
+  At the split into commits: the collector re-check (lock.go, words.go, command.go) goes in a "Lent to Core (collector):"
+  commit, and the bring-in refusal (internal/bringin/run.go, the viewer track's) in a lent commit of its own. Its review `REVIEW-NA5-move.md` found 4 HIGH (a copied
+  bundle places the login twice; `back` takes an older round trip's bundle; -bundle around staging deletes staged files;
+  the PC's old-library path breaks the NAS collector) and MED ones (backups keep the login files; a wrong key; the
+  viewer's decisions.sqlite not moved). The fix round's decisions are in this file's log and in the coder's brief
+  message: points 1-11 of the review, all to fix, probes in the review's scratch folder to pass. **Owed:** finish the
+  fix round (the coder's hand-back at the stop says which points are done), then a SECOND review pass (logic errors),
+  then list; the lent collector commit 8eb5f317 is read by the integrator (Core and pages archived).
+- **Owed small:** none else. Later pieces: the launcher's button for the move and starting the PC's `back` (pages);
+  thumbnails/fingerprints' ffmpeg container on the NAS; N2-N4 (the PC-run NAS downloader) kept, nothing built on them.
+- **The owner's NAS steps:** tonight's tunnel speed test (M2) is on the owner's page (image in `nas-test-image/`); the
+  move's steps are in `deploy/nas-app/README.md` on `wip/nas-move` and in the section below; none runs before NA5 is
+  merged and the owner starts it. Nothing of this track has run on the NAS or against Telegram.
+- Tools: lock `runs-nas-n1/go1.sh`; race in Docker `runs-nas-n1/race-run.sh <copy> <cpus> <mem> <timeout> <go test args>`.
+
+## The owner's steps for the move (for the instructions page; from `deploy/nas-app/README.md`, branch `wip/nas-move`; NOT to run before NA5 is merged and the owner starts it)
+1. On the PC: build the NAS image and `tgarchive-nasmove.exe` (README's build step).
+2. On the NAS: stop the test project; set its `data` and `keys` aside; keep `wireguard.conf`; make a new staging folder; point the library at the archive's own folder.
+3. On the PC: quit the app; run `tgarchive-nasmove out` (it shows the counts first and says the PC's login files are then deleted, which cannot be undone); type yes; copy the bundle to the NAS with `scp -r`.
+4. On the NAS: run `in` inside the image (`docker compose run ... --entrypoint /app/tgarchive-nasmove collector in ...`), then `docker compose up -d`.
+5. The way back: `out` on the NAS, then `back` on the PC.
+
+## The owner's step for tonight (sent to I-7 for the instructions page, 11-22): the tunnel's speed test on the NAS (M2)
+Nothing to Telegram, no sign-in, about 1 GB. The integrator builds `tgarchive-nasdl-0.1.0.tar` (deploy/nasdl/README "Build");
+the owner makes a Windscribe WireGuard file (with a DNS line; for this test only), loads the image, makes
+`/volume1/<share>/nasdl-test` and `/volume2/docker/tgarchive-nasdl/data` (1000:10, data 700), copies compose.yaml,
+settings.conf (listen 10.0.0.42, accounts 1) and wireguard.conf (600), then runs
+`cd /volume2/docker/tgarchive-nasdl && sudo docker compose run --rm nasdl vpntest -dir /data` (never `compose up`).
+Expected: the address check "different", MB/s and CPU seconds: the one open number of the tunnel on the NAS.

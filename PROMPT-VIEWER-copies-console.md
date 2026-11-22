@@ -49,6 +49,19 @@ now it's useless, since everything is obviously mirrored from another chat".
    (`powershell -ExecutionPolicy Bypass -File "C:\Users\trabi\tgarchive-app-next\update-folder.ps1" -Into "C:\Users\trabi\tgarchive-app"`,
    with the app quit first).
 
+## Part 2, only after part 1 is merged and reported, and only if the owner says go on: the built-in preview
+The owner, 11-22: "Regular telegram can at least see previews/thumbnails before downloading, but this one can't?"
+Every Telegram photo and video message carries a tiny blurred preview INSIDE the message (the stripped thumbnail,
+`photoStrippedSize`, type "i", about 100 to 300 bytes, and the document's own `thumbs` list). The reader already
+receives it with every message; the app does not keep it. Keep it, and draw it, blurred, in every "Not downloaded"
+box (where part 1 found no saved copy). **No new request of any kind**: only what the reader already gets. It
+touches the reader (`internal/telegram`/`tgstore`, Core's), the catalogue (one schema step, after the newest; safe
+to run twice; never on a file it can't read) and the viewer. Rules as part 1, plus: the catalogue's whole
+`-run 'Schema|Step'` set; whole `internal/collector`, `internal/catalog`, `internal/telegram`, `internal/tgstore`,
+`internal/viewer` at the merge. Posts read before this get no preview (that would need a re-read of history: a
+request cost, the owner's decision; say so in the report, do not do it). Real small thumbnails fetched from Telegram
+(`upload.getFile` of a thumb size) are a NEW kind of request: never built without the owner's OK and a measured cost.
+
 ## Stop and ask the owner when
 - the catalogue holds no link from the post to the saved copy (then say what would have to be recorded, and stop);
 - anything would download, release or write, or would need the owner's real folders.

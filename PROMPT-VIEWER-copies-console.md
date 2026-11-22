@@ -62,6 +62,13 @@ to run twice; never on a file it can't read) and the viewer. Rules as part 1, pl
 request cost, the owner's decision; say so in the report, do not do it). Real small thumbnails fetched from Telegram
 (`upload.getFile` of a thumb size) are a NEW kind of request: never built without the owner's OK and a measured cost.
 
+## Part 3, small, with part 1 or 2: closing a media view returns to the chat
+The owner, 11-22: "if you open an image/video from the 'In the chat' option, clicking the X to close only closes
+that one, or brings you back a level, but not to the main/chat page again, so you might need to hit X or escape
+multiple times." One X or Escape from a media view opened out of a chat must land back on that chat, at the same
+place in it (not step back through every view opened on the way). Viewer web only; a browser test that opens a
+media view from a chat, closes it once, and finds the chat.
+
 ## Stop and ask the owner when
 - the catalogue holds no link from the post to the saved copy (then say what would have to be recorded, and stop);
 - anything would download, release or write, or would need the owner's real folders.

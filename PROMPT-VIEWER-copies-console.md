@@ -49,7 +49,7 @@ now it's useless, since everything is obviously mirrored from another chat".
    (`powershell -ExecutionPolicy Bypass -File "C:\Users\trabi\tgarchive-app-next\update-folder.ps1" -Into "C:\Users\trabi\tgarchive-app"`,
    with the app quit first).
 
-## Part 2, only after part 1 is merged and reported, and only if the owner says go on: the built-in preview
+## Part 2, right after part 1 is merged and reported (the owner asked for both, 11-22): the built-in preview
 The owner, 11-22: "Regular telegram can at least see previews/thumbnails before downloading, but this one can't?"
 Every Telegram photo and video message carries a tiny blurred preview INSIDE the message (the stripped thumbnail,
 `photoStrippedSize`, type "i", about 100 to 300 bytes, and the document's own `thumbs` list). The reader already

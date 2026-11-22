@@ -1,0 +1,11 @@
+# Core track: progress (newest state only; the history is in SESSION-CORE-LOG.md)
+
+## STATE FOR A TAKE-OVER (K-6, updated 11-22 12:50; context near full: the next Core session takes over from here; 11-22 11:53; usage at 92%; the integrator is I-7, `local_78ac6953-2e70-4c12-a371-4f255f71e85c`)
+- **Merged** (main head 9cb4edc): K24, K20, K28b with the bring-in; earlier K18, K22 (alerts' record), K22b (the owner's bot with two-way commands, and Saved Messages), K23 (collector tests in about half the time), K25, K26 (topic titles), K27 (nightly backup), K28 (new-chats download setting).
+- **Listed:** K29 `wip/core-nasalerts` a85fa5b0 (the NAS's six alert kinds; holds 2b38b2a3; a trial build clean). Trial-built clean on 9cb4edc; after I-7's UI batch.
+- **Core's OK given, not Core's to list:** N4 (merged), NA2 (N-1's `wip/nas-ctunnel` 6a04d72c, the collector's way to Telegram: system/tunnel/none; one review plus Core's read of the fixes).
+- **The owner's decisions this session:** item 42 (alerts by a bot and Saved Messages), the two-way bot, item 49 (the 2-minute trial, "Option B for now").
+- **K30 LISTED** (`wip/core-react` 36e362e0: reactions and service actions for the viewer; race clean; its step number is I-7's to give, after the UI batch's 37 and 38).
+- **Next, not started:** the watchdog's own alerts (a crash, a restart refused, a hang raised through K22's record: the watchdog does not open the catalogue today; design first). Then whatever the owner or the integrator gives Core. Nothing of Core runs now.
+- **Tools:** `runs-core-k5/go2.sh` (the track's lock, holder's pid inside, a dead holder taken over); `runs-core-k6/trialbuild.sh <branch>` (a trial merge onto the head, then build and vet, in a scratch copy); `runs-core-k6/post.py`.
+- **Lessons:** (0) merge-tree is not a check: a branch is clean only after a trial merge AND a build; (1) a schema step must be safe to run twice, so run the whole catalogue's `-run 'Schema|Step'` before listing; (2) never force-stop a lock holder; (3) a branch holding another unmerged branch's commits conflicts once that branch is squash-merged: merge the head in at once; (4) a test that counts requests in a fixed window must anchor the window on an event, not a clock moment.

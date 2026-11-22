@@ -1,0 +1,5 @@
+# Only the top-level notes are tracked: every folder here is its own checkout, a tool or a report.
+/*
+!/.gitignore
+!/*.md
+!/*.sql

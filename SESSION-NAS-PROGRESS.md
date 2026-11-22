@@ -24,6 +24,7 @@
 - **The owner's NAS steps:** tonight's tunnel speed test (M2) is on the owner's page (image in `nas-test-image/`); the
   move's steps are in `deploy/nas-app/README.md` on `wip/nas-move` and in the section below; none runs before NA5 is
   merged and the owner starts it. Nothing of this track has run on the NAS or against Telegram.
+- **The owner's decision (11-22, with I-7; CLAUDE.md's NAS line, PROMPT-NA5-console.md):** the NAS containers run as a dedicated regular (non-admin) NAS user of the app's own, not 1000:10: `user: "${TGARCHIVE_UID:?}:${TGARCHIVE_GID:?}"` from a `.env`, with README steps to create that user and `chown` its folders. Applies to deploy/nas-app (collector, viewer, gate) and the NA5 README; to do in NA5's fix round.
 - Tools: lock `runs-nas-n1/go1.sh`; race in Docker `runs-nas-n1/race-run.sh <copy> <cpus> <mem> <timeout> <go test args>`.
 
 ## The owner's steps for the move (for the instructions page; from `deploy/nas-app/README.md`, branch `wip/nas-move`; NOT to run before NA5 is merged and the owner starts it)

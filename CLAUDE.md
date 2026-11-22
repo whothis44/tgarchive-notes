@@ -82,7 +82,10 @@ only; where it and this file differ, this file wins.
   random; albums wait until whole; exact repeats of a message already in the mirror are not forwarded again; forums
   are mirrored as forums with the same topics. Downloads of a chat joined while away: a setting (off, unlimited hours
   only, always).
-- **On the NAS every Docker container runs in `network_mode: host`** and reads shares as `user: "1000:10"`.
+- **On the NAS every Docker container runs in `network_mode: host`** and as a **dedicated regular (non-admin) NAS
+  user of the app's own**, never the owner's admin account and never root: its uid:gid come from the project's `.env`
+  (the owner, 11-22: "Should probably be a regular user only for security"; it replaces the earlier `1000:10`, which on
+  UGOS is often the admin account). That user gets read and write on the app's own folders and shares only.
 - Commands given to the owner use full absolute paths and work from any folder; a script is run exactly as the owner
   will run it, on a scratch copy, before it is handed over.
 

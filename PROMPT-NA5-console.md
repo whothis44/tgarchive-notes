@@ -23,6 +23,18 @@ costs the owner real money.
 3. `BRIEF-NA5-move.md` (what NA5 is) and `REVIEW-NA5-move.md` (the review's 4 HIGH and MED points, 1 to 11).
 4. `START-INTEGRATOR.md`, sections "Each batch" and "Practical" (how a piece is tested and merged here).
 
+## The owner's decision of 11-22 (part of NA5)
+The NAS containers must run as a **dedicated regular (non-admin) NAS user of the app's own**, not as `1000:10`
+(on UGOS that is often the owner's admin account). Owner: "Should probably be a regular user only for security"
+(`CLAUDE.md`, the NAS line). In `deploy/nas-app` (and `deploy/nasdl`): every service's `user:` becomes
+`"${TGARCHIVE_UID:?}:${TGARCHIVE_GID:?}"` (compose refuses to start without them), read from a `.env` beside
+`compose.yaml`, with a `.env.example`. The README gets the owner's steps: create the user in UGOS as a regular user
+(not in the administrators group), grant it read/write on the app's own share only, `id <user>` over SSH for the
+numbers, write them into `.env`, and `chown -R <uid>:<gid>` the project folders. `tgarchive-nasmove in` and the
+folder steps use those numbers, never a fixed 1000. The images' `USER` line stays a non-root default. Keep
+`cap_drop: [ALL]`, the read-only root, `no-new-privileges` and no Docker socket exactly as they are. Include this in
+NA5's own commit and in the second review's checks.
+
 ## Steps
 1. **Finish the fix round** in the existing copy `C:\Users\trabi\Claude\Projects\Telegram\wt-nas-move` (branch
    `wip/nas-move`, head 7b0d01c0, which does not build yet). Do every review point marked NOT done in the state block,

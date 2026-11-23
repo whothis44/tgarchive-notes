@@ -36,6 +36,13 @@ report at the end. Use no subagents unless an item says so.
    still read, kept and searchable as today. Kept with the window's other preferences. Front end only
    (`internal/viewer/web` and/or `internal/appshell`, wherever the list is drawn; the pages' and viewer's security
    sets by name: `server -run 'TestAssets|Security'`, `viewer -run 'TestWall|TestHomeDevice|TestLAN|Security|TestPageScripts'`).
+0d. **A stopped mirror still shows under "mirrors under way"** (the owner, 11-22, with a screenshot of the chip
+   "Showing: mirrors under way (1) · show all", after stopping that mirror). Find in the code which state a stopped
+   mirror has and why the filter and its count still take it as under way: the filter's state list, a stale count,
+   a stop that leaves the row's state until a later turn, or the page not refreshing. A stopped mirror must leave
+   "under way" (and its count) at once. A test with an invented mirror: start, stop, then the filter and the count.
+   Pages and viewer (wherever the chip is drawn and its counts come from); the security sets by name as in 0c. Never
+   open the owner's app or catalogue to look.
 1. **`internal/storeledger` `TestStoreEndToEnd`** fails up to 6 in 8 runs since 11-22 ("staging holds 4f (1)",
    storeledger_test.go:432): passes 8/8 on 2b38b2a, 1/8 fails from the UI batch (631dec0) on, 6/8 on 3c0c4fa.
    Likely a background worker added that day (clutter fill, picture hashes, fingerprints) holding a staged copy

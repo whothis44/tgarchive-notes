@@ -54,6 +54,20 @@ report at the end. Use no subagents unless an item says so.
    before merging, with the diff only; fix what it finds.
 6. **The range server answering past a part's end** (C25's finding, in `SESSION-COPIES-PROGRESS.md`): fix with a test.
 
+7. **Copies' small leftovers** (C30's T4 mark, C32's N1, the two stale sentences in C34's report): as the state block
+   at the top of `SESSION-COPIES-PROGRESS.md` describes them. Anything that changes which file is held, skipped or
+   released gets ONE independent review subagent first.
+8. **The viewer's last unmerged piece, MCv** (`SESSION-B-PROGRESS.md`, the newest state block: "everything merged but
+   MCv"): refit it onto the head and merge it, or, if today's merges made it obsolete, say why and drop it.
+9. **The mirror's owed small items** (`SESSION-MIRROR-PROGRESS.md`, the block "STATE FOR A TAKE-OVER (session M-7"):
+   the pages' doors and the clean-up. NOT the first adoption and NOT the night's numbers: those need the owner.
+10. **The watchdog's own alerts: a design note only** (Core's next item, `SESSION-CORE-PROGRESS.md`): a crash, a
+   refused restart or a hang raised into K22's alert record, although the watchdog doesn't open the catalogue
+   today. Write `DESIGN-CORE-watchdog-alerts.md` (one page, a recommendation, the owner's yes asked). No code.
+11. **The NAS's ffmpeg container** (`SESSION-NAS-PROGRESS.md`, later pieces): so video fingerprints, the frame check
+   and thumbnails also run on the NAS. Deploy files and the image build only (as `deploy/nas-app`), with the same
+   regular-user, read-only, no-capabilities rules; nothing sent to or run on the NAS.
+
 ## Stop (skip the item, report it) when
 - a fix would need the owner's real folders, the NAS, SSH, or Telegram;
 - an item's cause is not found within a reasonable effort: report what you measured.

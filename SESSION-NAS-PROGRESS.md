@@ -1,5 +1,8 @@
 # The NAS downloader track: progress (newest state only; older text in SESSION-NAS-LOG.md)
 
+## NEWEST (Console run, 11-22 ~20:30): NA5 READY, held for the owner's OK
+- `wip/nas-move` e11fb3e5 (holds main 2c5d21a0): the fix round finished, the second review (REVIEW-NA5-move-2.md) fixed and re-checked "may be listed", the app's own NAS user (`.env`) done; whole runs ok on the combined tree (SESSION-11-PROGRESS.md, "NA5 on Console credits"). Not merged: the owner's stop rule. The block below is older.
+
 ## STATE FOR A TAKE-OVER, session N-1 (Opus), 11-22 16:37: stopped by usage (99%); start from here
 - **The direction (owner, 11-22, item 50 "Yes, as recommended"):** the whole app runs headless on the NAS, the PC's app
   is its dashboard; the login MOVES with the catalogue; the PC downloads nothing for a NAS-run archive.

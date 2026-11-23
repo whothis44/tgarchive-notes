@@ -43,6 +43,24 @@ report at the end. Use no subagents unless an item says so.
    "under way" (and its count) at once. A test with an invented mirror: start, stop, then the filter and the count.
    Pages and viewer (wherever the chip is drawn and its counts come from); the security sets by name as in 0c. Never
    open the owner's app or catalogue to look.
+0e. **The Overview's "Today" is wrong** (the owner, 11-22, screenshot: "Downloaded 35 GB · Into the library 0 files ·
+   0 B"). Measured read-only by the integrator the same evening: 1,137 files, 35.2 GB were saved into the library
+   in those 24 hours (`file.location='library'`, `saved_at` within the window), from the one chat set to collect.
+   So "Into the library" counts something else or is broken. Find what it counts, make it the files and bytes that
+   entered the library in the window (or rename it to what it really is), and make every number on that card say
+   plainly what it counts. Also: the owner believed downloads were off; make it obvious on the Overview which chats
+   download (a "Downloading from N chats" line linking to the filtered Chats list). Test with an invented catalogue.
+0f. **A mirror whose source chat was deleted** (the owner, 11-22: "I think the channel we were mirroring from was
+   deleted?"; screenshots: the alert "The automatic mirror of a chat is blocked until you look at it: nothing more
+   is sent for it by itself", "ended by itself", and on the Overview "1 under way · 2 complete · 2 ended for good").
+   Find how a deleted or inaccessible source shows up (the error the reader or the mirror gets) and give it its own
+   state and words: "the source chat no longer exists (or you lost access): this mirror is ended, nothing more can
+   come", not "blocked until you look at it". The alert offers Remove from the list; the mirror's chat itself stays
+   as it is. Together with 0d's count. No new request to Telegram (use what the reads already return).
+0g. **Pin and unpin a chat in the viewer** (the owner, 11-22). A pinned chat stays at the top of the window's chat
+   list (in pin order; drag or up/down to reorder), from the chat's menu and the list's right-click; kept with the
+   viewer's other preferences (not Telegram's pins; nothing sent to Telegram). Front end and the viewer's
+   preferences only; the security sets by name as in 0c.
 1. **`internal/storeledger` `TestStoreEndToEnd`** fails up to 6 in 8 runs since 11-22 ("staging holds 4f (1)",
    storeledger_test.go:432): passes 8/8 on 2b38b2a, 1/8 fails from the UI batch (631dec0) on, 6/8 on 3c0c4fa.
    Likely a background worker added that day (clutter fill, picture hashes, fingerprints) holding a staged copy

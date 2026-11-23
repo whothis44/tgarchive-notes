@@ -54,9 +54,15 @@ report at the end. Use no subagents unless an item says so.
    Telegram. Drive every place of the window and the pages in the headless browser the tests use
    (`TGARCHIVE_BROWSER` = Edge, as the viewer's browser tests do), take a screenshot of each place and each state,
    and LOOK at them (read the PNGs). Write `AUDIT-UI-1122.md` with the screenshots under `reports/ui-1122/`: each
-   problem with where, what is wrong, and a one-line fix, worst first; check against `DESIGN-ONE-WINDOW.md`. Fix the
-   clear small ones at once (words, a missing way back, a wrong count, a broken click), merged as their own piece;
-   list the rest for the next integrator. Never the owner's app or catalogue; invented data only.
+   problem with where, what is wrong, and a one-line fix, worst first; check against `DESIGN-ONE-WINDOW.md`.
+   **Then FIX EVERYTHING it found** (the owner, 11-22: "Why not ask it to fix everything? We have the usage"), worst
+   first, in pieces of a sensible size, each tested (the pages' and viewer's security sets by name, browser tests
+   for what a person clicks) and merged as it is finished. Then run the whole check again on the new head, with new
+   screenshots, and fix what is still wrong; repeat until the audit is clean or only the exceptions are left.
+   **The only exceptions**, listed with a one-line recommendation for the owner instead of built: a change that
+   would contradict the agreed `DESIGN-ONE-WINDOW.md` (a different layout, removing a place), or anything that would
+   send to Telegram or change what is downloaded, held or released. Never the owner's app or catalogue; invented
+   data only. The final `AUDIT-UI-1122.md` shows each problem as found, fixed (with its commit) or left (why).
 0. **The viewer: filter the chat list by account** (the owner, 11-22: "a way to filter chats by account"). The list
    of chats (and chat groups) gets an "Account" filter: all accounts (default), each signed-in account, and the old
    archive (the brought-in account) by its own word. The choice is kept with the viewer's other preferences.

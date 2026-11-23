@@ -19,6 +19,22 @@ report at the end. Use no subagents unless an item says so.
   `bash ix-tools/notes-backup/backup.sh`.
 
 ## The items, in order
+00. **FIRST AND KEY: cross-referencing in the viewer** (the owner, 11-22: "don't forget the cross referencing, that's
+   key", with a screenshot, AFTER the viewer's saved-copy fix was installed, of a post still showing only "Not
+   downloaded / held back by the archiver"). Every post whose media the archiver did not download because it
+   recognised it must show WHAT it was recognised as and WHERE that copy is, and show that copy when it can:
+   - Find every reason a file is held or not downloaded (the hold reasons, exact links, probable and look-alike
+     edges, frame-check verdicts, the old archive's sightings and `library.old_root`, the brought-in account) and,
+     for each, the catalogue's link to the recognised copy. Map them in a short table in your report.
+   - Show the copy wherever it is: this app's library; **the old archive** (through `libroot.Resolve` and the old
+     root, read-only, when the bring-in has been run); another chat's saved post. Label it: "same file as … in
+     <chat>", "probably the same as … (held: Release)", "in the old archive".
+   - When the recognised copy is only in the old archive and the bring-in has NOT been run, say exactly that ("a copy
+     is in your old archive: run the bring-in from the launcher to see it here"), never a bare "held back".
+   - A "Held" view (or filter) listing every held post with its recognised copy side by side, and Release / Keep held.
+   - Read-only: nothing downloaded, released or written by viewing; Release stays the existing door. This decides
+     nothing, but it touches the hold paths' reading: ONE independent review subagent before merging.
+   Tests on invented catalogues for each reason, including an old-archive copy with and without the bring-in.
 0. **The viewer: filter the chat list by account** (the owner, 11-22: "a way to filter chats by account"). The list
    of chats (and chat groups) gets an "Account" filter: all accounts (default), each signed-in account, and the old
    archive (the brought-in account) by its own word. The choice is kept with the viewer's other preferences.

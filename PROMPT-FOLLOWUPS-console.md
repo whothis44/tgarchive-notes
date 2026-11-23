@@ -45,6 +45,18 @@ report at the end. Use no subagents unless an item says so.
 02. **A plain way to the chat list** (the owner: "how do I get to the chat list without clicking one of these? Not
    intuitive", about the Overview's mirror counts). A "Chats" entry always visible in the window's left list (and a
    "Mirrors" one), opening the full list with its filters; the Overview's counts stay as shortcuts only.
+03. **A full UI check on invented data, after 00 to 0g are merged** (the owner, 11-22: "is there a way to get a full
+   UI check on the mocked up version? Right now it's kind of a mess"). Generate an invented archive with
+   `internal/fabricate` (several accounts incl. a brought-in one, mirrors in every state incl. a deleted source,
+   held and copied posts of every reason, albums, forums, long chats, Saved Messages), build the app from the head
+   into a scratch folder of your own (`deploy/folder/make-folder.sh <scratch>`), and run it there with
+   `LOCALAPPDATA` and the app's data redirected into the scratch folder, no Telegram sign-in, nothing against
+   Telegram. Drive every place of the window and the pages in the headless browser the tests use
+   (`TGARCHIVE_BROWSER` = Edge, as the viewer's browser tests do), take a screenshot of each place and each state,
+   and LOOK at them (read the PNGs). Write `AUDIT-UI-1122.md` with the screenshots under `reports/ui-1122/`: each
+   problem with where, what is wrong, and a one-line fix, worst first; check against `DESIGN-ONE-WINDOW.md`. Fix the
+   clear small ones at once (words, a missing way back, a wrong count, a broken click), merged as their own piece;
+   list the rest for the next integrator. Never the owner's app or catalogue; invented data only.
 0. **The viewer: filter the chat list by account** (the owner, 11-22: "a way to filter chats by account"). The list
    of chats (and chat groups) gets an "Account" filter: all accounts (default), each signed-in account, and the old
    archive (the brought-in account) by its own word. The choice is kept with the viewer's other preferences.

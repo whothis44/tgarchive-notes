@@ -107,6 +107,11 @@ report at the end. Use no subagents unless an item says so.
    list (in pin order; drag or up/down to reorder), from the chat's menu and the list's right-click; kept with the
    viewer's other preferences (not Telegram's pins; nothing sent to Telegram). Front end and the viewer's
    preferences only; the security sets by name as in 0c.
+0z. **`internal/bringin` `TestRealDoorsMatchFake` and `TestKillAtTenPoints` fail on main** (found by the NA5 run,
+   11-22: they fail the same way without NA5, "on clutter scores"; logs `runs-int-na5/win-B-bringin.log`,
+   `runs-nas-n1/na5-bringin-rerun.log`). Most likely the bring-in's fake doors and its kill-point counting do not
+   know C34's clutter-score rows and triggers. Fix them so the bring-in still behaves exactly as reviewed (it must
+   only add; a guard undoes a chunk if a file's state would change); test by name and whole `internal/bringin`.
 1. **`internal/storeledger` `TestStoreEndToEnd`** fails up to 6 in 8 runs since 11-22 ("staging holds 4f (1)",
    storeledger_test.go:432): passes 8/8 on 2b38b2a, 1/8 fails from the UI batch (631dec0) on, 6/8 on 3c0c4fa.
    Likely a background worker added that day (clutter fill, picture hashes, fingerprints) holding a staged copy

@@ -26,6 +26,10 @@ report at the end. Use no subagents unless an item says so.
    kept. Tests on an invented catalogue with two accounts and a brought-in one; the viewer's security sets
    (`go test ./internal/viewer -run 'TestWall|TestHomeDevice|TestLAN|Security|TestPageScripts'`); whole
    `internal/viewer` and `internal/server` at the merge.
+0b. **The viewer: jump to the top of a chat** (the owner, 11-22: "a way to jump to the top of a chat, once in it").
+   In a chat's view, a button (and the Home key) goes to the chat's first message, loading what is needed; one
+   beside it back to the newest (End). Viewer only; one door call per page of messages as today; a browser test
+   that opens a long invented chat, jumps to the top and finds the first message, then back to the newest.
 1. **`internal/storeledger` `TestStoreEndToEnd`** fails up to 6 in 8 runs since 11-22 ("staging holds 4f (1)",
    storeledger_test.go:432): passes 8/8 on 2b38b2a, 1/8 fails from the UI batch (631dec0) on, 6/8 on 3c0c4fa.
    Likely a background worker added that day (clutter fill, picture hashes, fingerprints) holding a staged copy

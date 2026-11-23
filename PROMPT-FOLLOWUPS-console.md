@@ -19,6 +19,13 @@ report at the end. Use no subagents unless an item says so.
   `bash ix-tools/notes-backup/backup.sh`.
 
 ## The items, in order
+0. **The viewer: filter the chat list by account** (the owner, 11-22: "a way to filter chats by account"). The list
+   of chats (and chat groups) gets an "Account" filter: all accounts (default), each signed-in account, and the old
+   archive (the brought-in account) by its own word. The choice is kept with the viewer's other preferences.
+   Viewer only (`internal/viewer` Go and web); read-only; numbers and the account's own label only, no new data
+   kept. Tests on an invented catalogue with two accounts and a brought-in one; the viewer's security sets
+   (`go test ./internal/viewer -run 'TestWall|TestHomeDevice|TestLAN|Security|TestPageScripts'`); whole
+   `internal/viewer` and `internal/server` at the merge.
 1. **`internal/storeledger` `TestStoreEndToEnd`** fails up to 6 in 8 runs since 11-22 ("staging holds 4f (1)",
    storeledger_test.go:432): passes 8/8 on 2b38b2a, 1/8 fails from the UI batch (631dec0) on, 6/8 on 3c0c4fa.
    Likely a background worker added that day (clutter fill, picture hashes, fingerprints) holding a staged copy

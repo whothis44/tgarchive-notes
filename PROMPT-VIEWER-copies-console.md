@@ -1,5 +1,9 @@
 # The viewer shows the saved copy (run this BEFORE the NA5 prompt) — on the owner's Console credits
 
+**First check what is already merged** (`git -C repo-archiver log --oneline 84e98ca5..HEAD`, the heading "Viewer
+copies on Console credits" in `SESSION-11-PROGRESS.md`, the logs in `runs-agent/`): an earlier run may have merged
+parts already. Do only what is missing (parts 1, 2, 3, 3b below); if everything is merged, say so and stop.
+
 **Do parts 1, 2 and 3 in ONE go, without stopping between them** (the owner is not watching, and a stop ends this
 run). Merge each part as it is finished (so a later failure never undoes an earlier part), write one line in the log
 per merged part, and give the owner ONE report at the very end covering all three. Stop early only for the reasons

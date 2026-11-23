@@ -1,6 +1,9 @@
 # The NAS downloader track: progress (newest state only; older text in SESSION-NAS-LOG.md)
 
-## NEWEST (Console run, 11-22 ~20:30): NA5 READY, held for the owner's OK
+## NEWEST (Console run, 11-22 late): the ffmpeg image (follow-up 11) merged in batch 2
+- `deploy/nas-app`: `ffmpeg/Dockerfile` (the static programs beside Alpine 3.22's signed ffmpeg 6.1), `build-ffmpeg.sh`, `compose.ffmpeg.yaml` (collector and viewer switched, +512 MiB each). Built and checked on the PC; not run on the NAS; whether its ffmpeg passes the collector's self-test is unseen.
+
+## NEWEST (Console run, 11-22 20:21): NA5 MERGED as a531f8d (second folder built); nothing moved until the owner runs `out`
 - `wip/nas-move` e11fb3e5 (holds main 2c5d21a0): the fix round finished, the second review (REVIEW-NA5-move-2.md) fixed and re-checked "may be listed", the app's own NAS user (`.env`) done; whole runs ok on the combined tree (SESSION-11-PROGRESS.md, "NA5 on Console credits"). Not merged: the owner's stop rule. The block below is older.
 
 ## STATE FOR A TAKE-OVER, session N-1 (Opus), 11-22 16:37: stopped by usage (99%); start from here

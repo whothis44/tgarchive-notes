@@ -1,5 +1,8 @@
 # Mirror track: current state (older text in `SESSION-MIRROR-LOG.md`, which nobody needs to read)
 
+## NEWEST (Console run, 11-22 late)
+- Merged in batch 2: WhyForum/ErrWantForum removed. Batch 1: a mirror blocked by a source-gone answer (CHANNEL_INVALID, CHANNEL_PRIVATE, ...) has its own state "the source chat no longer exists (or you lost access)", counted ended, Remove from the list (the stop), its alert's words. NOT done: the pages' door for `mirror -pause-reset` and the held/set-aside/put-back facts (acts for the owner on pacing: review owed).
+
 ## STATE FOR A TAKE-OVER (session M-7, 11-22 11:48): nothing of the track runs; M-7 is archived
 - **Integrator:** I-7 (`local_78ac6953-2e70-4c12-a371-4f255f71e85c`): listings and reports go there.
 - **Merged** (head 09aeba54 and later): M14 deleted posts never block, singles 5-20 s, exact repeats skipped (step 29);

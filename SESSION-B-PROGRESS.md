@@ -1,5 +1,8 @@
 # Viewer and bring-in track: current state (session B9; older text in `SESSION-B-LOG.md`, nobody needs to read it)
 
+## NEWEST (Console run, 11-22 late)
+- MCv (`wip/b-mirrorcount` f1ee3d3d) is obsolete: its counts came into main with the UI batch (QC2's merge of that branch) and now include lib:clutter. Dropped. Viewer pieces of this run: cross-referencing and the Held view (00), Account filter (0), First/Newest (0b), pins (0g, in the frame), the old library read under library.old_root.
+
 ## STATE FOR A TAKE-OVER (B9, 11-22, the week's usage at 99%: everything merged or listed; nothing runs)
 A successor starts from this block alone. No agent, script or window of this track runs.
 - **Owns:** `internal/viewer` Go (handlers, index, data), `internal/window` native parts, `internal/bringin`,

@@ -1,5 +1,8 @@
 # Core track: progress (newest state only; the history is in SESSION-CORE-LOG.md)
 
+## NEWEST (Console run, 11-22 late)
+- `DESIGN-CORE-watchdog-alerts.md` written (follow-up 10): the watchdog keeps its wall; the collector at its start and the window carry its news; the owner's yes asked. No code.
+
 ## STATE FOR A TAKE-OVER (K-6, final, 11-22 14:56; context full: K-6 hands over; the integrator is I-7, `local_78ac6953-2e70-4c12-a371-4f255f71e85c`)
 - **Merged** (main head a0de4f1): K29 (NAS alerts), K30 (reactions and service actions); before them K24, K20, K28b with the bring-in; earlier K18, K22 (alerts' record), K22b (the owner's bot with two-way commands, and Saved Messages), K23 (collector tests in about half the time), K25, K26 (topic titles), K27 (nightly backup), K28 (new-chats download setting).
 - **Listed:** nothing of Core.

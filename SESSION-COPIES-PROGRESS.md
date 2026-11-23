@@ -1,5 +1,8 @@
 # Copies track: progress (current state only; everything older is in `SESSION-COPIES-LOG.md`)
 
+## NEWEST (Console run, 11-22 late): items 1, 5, 6, 7 of the follow-ups
+- Merged in batch 2 (see SESSION-11-PROGRESS.md): the range server runs on into kept parts (C25's finding); C32's N1 (reversed probable edge within DurSlack, reviewed twice; its second review flags the door's FIRST branch has no length check either: a review of its own, not done); C34's report's words; the store's duplicate staged copy left behind (storeledger flake, product fix, reviewed). NOT merged: library pictures' PDQ pass `wip/all-libpics` 51aa5fa9 (built, tested, reviewed: spends the owner's library-read cap a second time beside the video pass, and its walk crawls when a batch is all passed over: needs the owner's word on a cap and default, then the fixes). C30's T4: left (very narrow, noted).
+
 ## STATE FOR A TAKE-OVER (session C7, Opus, 11-22 14:57): C7's context is long; a fresh copies session takes the next item
 - **Nothing of this track runs.** No coder, reviewer or test run. The integrator is I-7 (`local_78ac6953-2e70-4c12-a371-4f255f71e85c`): listings and reports go there by direct message.
 - **Merged (C7's session):** C23 to C27, C29 to C33, C35, C36, C28 (head a0de4f1); C34 (the clutter score, with its join fix `wip/copies-39-j`) in the UI batch; **C37** (the held tier's order, `wip/copies-42` 32190967, step 44) in the client batch now: its copy `wt-copies-42` is kept until it merges, then remove it with `ix-tools/copies-remove-copies.sh`.

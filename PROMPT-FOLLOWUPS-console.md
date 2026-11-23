@@ -59,9 +59,11 @@ report at the end. Use no subagents unless an item says so.
    first, in pieces of a sensible size, each tested (the pages' and viewer's security sets by name, browser tests
    for what a person clicks) and merged as it is finished. Then run the whole check again on the new head, with new
    screenshots, and fix what is still wrong; repeat until the audit is clean or only the exceptions are left.
-   **The only exceptions**, listed with a one-line recommendation for the owner instead of built: a change that
-   would contradict the agreed `DESIGN-ONE-WINDOW.md` (a different layout, removing a place), or anything that would
-   send to Telegram or change what is downloaded, held or released. Never the owner's app or catalogue; invented
+   `DESIGN-ONE-WINDOW.md` is a concept, not a constraint (the owner, 11-22: "if it sees a disaster, the one-window
+   design was more of a concept. I don't want it constrained too hard by it"): where it makes the app worse to use,
+   change it, and say what you changed and why in the audit. Keep its spirit: one window, a list on the left, no
+   media shown on a fresh start. **The only exception**, listed with a one-line recommendation for the owner
+   instead of built: anything that would send to Telegram or change what is downloaded, held or released. Never the owner's app or catalogue; invented
    data only. The final `AUDIT-UI-1122.md` shows each problem as found, fixed (with its commit) or left (why).
 0. **The viewer: filter the chat list by account** (the owner, 11-22: "a way to filter chats by account"). The list
    of chats (and chat groups) gets an "Account" filter: all accounts (default), each signed-in account, and the old

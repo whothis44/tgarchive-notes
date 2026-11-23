@@ -35,6 +35,16 @@ report at the end. Use no subagents unless an item says so.
    - Read-only: nothing downloaded, released or written by viewing; Release stays the existing door. This decides
      nothing, but it touches the hold paths' reading: ONE independent review subagent before merging.
    Tests on invented catalogues for each reason, including an old-archive copy with and without the bring-in.
+01. **Mirroring has its own place in a chat's panel** (the owner, 11-22: "I had collecting on, but I meant to turn on
+   the mirroring", and "the mirroring doesn't seem to have a separate option in there?"; screenshot: the chat panel's
+   COLLECTING section only). In each chat's panel, a **MIRRORING** section of its own, above COLLECTING: whether this
+   chat is mirrored (and to which mirror), "Mirror this chat" / "Stop mirroring" through the existing mirror doors
+   (the owner's click only; their waits and paces as today), and its state in plain words. Collecting and mirroring
+   are named so they can't be mistaken: "Collect this chat's files (download them)" vs "Mirror this chat (forward
+   its posts to a copy chat)". Nothing new is sent to Telegram beyond what those doors already do.
+02. **A plain way to the chat list** (the owner: "how do I get to the chat list without clicking one of these? Not
+   intuitive", about the Overview's mirror counts). A "Chats" entry always visible in the window's left list (and a
+   "Mirrors" one), opening the full list with its filters; the Overview's counts stay as shortcuts only.
 0. **The viewer: filter the chat list by account** (the owner, 11-22: "a way to filter chats by account"). The list
    of chats (and chat groups) gets an "Account" filter: all accounts (default), each signed-in account, and the old
    archive (the brought-in account) by its own word. The choice is kept with the viewer's other preferences.

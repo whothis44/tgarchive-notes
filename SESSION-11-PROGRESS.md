@@ -140,3 +140,4 @@
 ## Fixes of 11-23, batch 2 (I-8, 09:42) — DONE; the take-over block above is finished
 - Merged f07dc56 (pushed; tree as tested f88bbb07, every whole package ok): nassign (REVIEW-fix-nassign-1123.md), nextguard, uilook (joined with the forget button). Second folder built with --update-only; update-folder.ps1 tried on scratch copies as the owner runs it: ok, marker not carried.
 - The head before the Console run is f07dc56. Next: the owner installs, then starts PROMPT-NEXT-1123-console.md, then a session with START-REVIEW-CONSOLE-1123.md.
+- 09:58: the pages' "a.m.." fixed and merged: head 3dd304d (the head before the Console run); second folder rebuilt from it.

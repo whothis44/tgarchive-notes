@@ -53,9 +53,8 @@ accounts).
 - Copies (`SESSION-COPIES-PROGRESS.md` "Next small items"): C30's T4 mark; the review owed on C32's N1 door's FIRST
   branch (no length check). Anything that changes what is held, skipped or released gets ONE independent review.
 - Viewer (`SESSION-B-PROGRESS.md` NEXT 2): one loopback client for the pages' reads.
-- Two UI quirks the owner flagged (11-23): (a) times read "08:33 a.m.." (a doubled full stop) wherever a sentence ends
-  on a time: `format.js`'s locale time under an en-CA-style locale; fix once there (a fixed time format or no stop after
-  a time) and check every page that prints a time; (b) on the Overview during a held stop, the header's "Quit now" and
+- Two UI quirks the owner flagged (11-23): (a) DONE by I-8 (232fcef3: the pages' format.js writes AM/PM without dots); check only the viewer's own
+  time format (`internal/viewer/web`) for the same "a.m.." and fix it the same way if it has it; (b) on the Overview during a held stop, the header's "Quit now" and
   the held bar's "Quit now" sit side by side: show one. Node or browser tests; `server -run 'TestAssets|Security'` and
   `viewer -run 'TestWall|TestHomeDevice|Security'` by name.
 

@@ -146,3 +146,7 @@
 - Merged on 3dd304d, pushed, in five tested batches: c8fc39f one "Quit now" + viewer times; b0445a5 docs; 50c9fdc viewer loopback client; b6fd23d library pictures with ONE library-read total (50,000 MB/h); 43382b8 add an account while another waits (step 45); 2315335 watchdog alerts (crash/hang sent on the alert channels); c71028f mirror pause-reset door + facts; 2fd63a0 copies T4 held_turn (step 46) + N1 length check; cead58b docs. Reviews: REVIEW-fix-{libpics,addacct,wdalerts,mirrordoor,copiest4}-1123.md.
 - Whole runs per batch on wt-int-c1123{a..e}; collector `TestSignedOutNotRecordedNoRedial` timed out in 2 of 3 whole runs (lanes idle when the sign-out is injected: a test timing race), ok by name every time; `TestChatActsThroughTheDoor` once, ok by name. Second folder built from cead58b.
 - Next: START-REVIEW-CONSOLE-1123.md; then the sign-out test's race, the review notes left (addacct NOTE C: no log-out of a refused duplicate login; libpics N1-N3; copies: old wrong probable edges stay).
+
+## Review of the Console run, 11-24 (I-9)
+- Console run checked (nine pieces, reviews, pushes, privacy); whole collector ok on cead58b alone. Merged d014680: 68d31ea second-login log-out (owner's design, reviewed, REVIEW-fix-logout-1123.md), d014680 two flaky collector tests made exact; whole collector (rerun after one unrelated TestNASDownloadsEndToEnd flake) and server ok on tree 674ecc3b.
+- Second folder built from d014680. Next: the owner installs; board items 51 (NAS wrong-user check) and 52 (revoked login on a non-home server) wait for the owner.

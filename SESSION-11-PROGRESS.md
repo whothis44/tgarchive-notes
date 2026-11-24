@@ -141,3 +141,8 @@
 - Merged f07dc56 (pushed; tree as tested f88bbb07, every whole package ok): nassign (REVIEW-fix-nassign-1123.md), nextguard, uilook (joined with the forget button). Second folder built with --update-only; update-folder.ps1 tried on scratch copies as the owner runs it: ok, marker not carried.
 - The head before the Console run is f07dc56. Next: the owner installs, then starts PROMPT-NEXT-1123-console.md, then a session with START-REVIEW-CONSOLE-1123.md.
 - 09:58: the pages' "a.m.." fixed and merged: head 3dd304d (the head before the Console run); second folder rebuilt from it.
+
+## Console run after 11-23 (Agent SDK, 18:00-23:30)
+- Merged on 3dd304d, pushed, in five tested batches: c8fc39f one "Quit now" + viewer times; b0445a5 docs; 50c9fdc viewer loopback client; b6fd23d library pictures with ONE library-read total (50,000 MB/h); 43382b8 add an account while another waits (step 45); 2315335 watchdog alerts (crash/hang sent on the alert channels); c71028f mirror pause-reset door + facts; 2fd63a0 copies T4 held_turn (step 46) + N1 length check; cead58b docs. Reviews: REVIEW-fix-{libpics,addacct,wdalerts,mirrordoor,copiest4}-1123.md.
+- Whole runs per batch on wt-int-c1123{a..e}; collector `TestSignedOutNotRecordedNoRedial` timed out in 2 of 3 whole runs (lanes idle when the sign-out is injected: a test timing race), ok by name every time; `TestChatActsThroughTheDoor` once, ok by name. Second folder built from cead58b.
+- Next: START-REVIEW-CONSOLE-1123.md; then the sign-out test's race, the review notes left (addacct NOTE C: no log-out of a refused duplicate login; libpics N1-N3; copies: old wrong probable edges stay).

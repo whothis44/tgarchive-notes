@@ -154,3 +154,7 @@
 ## Sharp previews and download from the viewer, 11-28 (I-9)
 - f1dc9a4 merged and pushed (owner's ask of 11-24, fully auto): previews of not-downloaded files (background/view/off, 8-12 s pace, step 47) and a viewer action to download a file; REVIEW-fix-tgthumbs-1124.md (two passes); whole catalog, collector, server, telegram, tgstore ok on tree 08ae5815.
 - Second folder built from f1dc9a4. Next: the owner installs and runs; read the "preview" and "preview_refresh" counts of the first hour for the cost.
+
+## Mirror speed and names, 11-28 (I-9)
+- a3a6a4e merged and pushed: 6bc244a the mirror woken by live messages (REVIEW-fix-mirrordelay-1128.md, two passes) and a3a6a4e numbers above every one in use; whole catalog, collector, mirror, server, telegram ok on tree 1abcef0f.
+- Measured before (7 days, aggregates): seen within 1 s; seen->sent p50 73-117 s single, 118-206 s albums, p90 18-30 min, p99 ~3 h; cause the reader's 60 s idle. Next: the same numbers after a day of the new build.

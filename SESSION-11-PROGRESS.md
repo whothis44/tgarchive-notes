@@ -150,3 +150,7 @@
 ## Review of the Console run, 11-24 (I-9)
 - Console run checked (nine pieces, reviews, pushes, privacy); whole collector ok on cead58b alone. Merged d014680: 68d31ea second-login log-out (owner's design, reviewed, REVIEW-fix-logout-1123.md), d014680 two flaky collector tests made exact; whole collector (rerun after one unrelated TestNASDownloadsEndToEnd flake) and server ok on tree 674ecc3b.
 - Second folder built from d014680. Next: the owner installs; board items 51 (NAS wrong-user check) and 52 (revoked login on a non-home server) wait for the owner.
+
+## Sharp previews and download from the viewer, 11-28 (I-9)
+- f1dc9a4 merged and pushed (owner's ask of 11-24, fully auto): previews of not-downloaded files (background/view/off, 8-12 s pace, step 47) and a viewer action to download a file; REVIEW-fix-tgthumbs-1124.md (two passes); whole catalog, collector, server, telegram, tgstore ok on tree 08ae5815.
+- Second folder built from f1dc9a4. Next: the owner installs and runs; read the "preview" and "preview_refresh" counts of the first hour for the cost.
